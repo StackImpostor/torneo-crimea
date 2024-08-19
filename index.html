@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora equinox</title>
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d6edce07c8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="CSS/index.css">
+  <script src="JS/participantes.js"></script>
+  <script src="JS/grupos.js"></script>
+  <script src="JS/index.js"></script>
+  <script src="JS/longpress.js"></script>
+  <script src="JS/drag.js"></script>
+  <script src="JS/save.js"></script>
+</head>
+
+<body>
+  <header id="header" class="d-flex justify-content-around">
+    <div class="contenedor-combate">
+      <h5>Próximo combate</h5>
+      <div class="contenedor-inputs-combate">
+        <select id="selector-grupo-1" placeholder="Grupo 1"></select>
+        <div id="grupo-combate-1"></div>
+        <div class = "d-flex flex-column">
+          <button id="btn-vs" class="btn btn-sm btn-light btn-outline-secondary" onclick="mostrarModalCombate()">VS</button> 
+          <button id="btn-clear" class="btn btn-sm btn-danger mt-1" onclick="limpiarSelects()">X</button> 
+        </div>
+        
+        <select id="selector-grupo-2" placeholder="Grupo 2"></select>
+        <div id="grupo-combate-2"></div>
+      </div>
+    </div>
+    
+  </header>
+  <hr/>
+  <!-- Lista de Grupos -->
+  <div id="contenedor-grupos"></div>
+  
+  <hr/>
+
+  <div id="botones-guardado" class="d-flex justify-content-around">
+    <button id="btn-importar" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-importar">Importar datos</button>
+    <button id="btn-exportar" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-exportar" onclick="exportarDatos()">Exportar datos</button>
+  </div>
+
+  </div>
+
+  <!-- Modal Combates -->
+  <div class="modal fade" id="modal-combate">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 id="titulo-modal-combate" class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>
+            <h5>Ganador</h5>
+            <div class="d-flex justify-content-around">
+              <input type="radio" class="btn-check" id="opcion-ganador-1" name="ganador">
+              <label class="btn btn-outline-success" id="label-opcion-ganador-1" for="opcion-ganador-1">Grupo 1</label>
+              <input type="radio" class="btn-check" id="opcion-ganador-2" name="ganador">
+              <label class="btn btn-outline-success" id="label-opcion-ganador-2" for="opcion-ganador-2">Grupo 2</label>
+            </div>
+          </div>
+          <hr>
+          <div id="contenedor-robos">
+            <h6>Roban a:</h6>
+            <div id="contenedor-botones-robos"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="listenerConfirmarRobos()">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal Importar-->
+  <div class="modal fade" id="modal-importar">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Importar datos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>
+            <textarea id="input-datos-guardado"></textarea>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger mx-5" onclick="borrarDatos()">Borrar Datos</button>
+          <button type="button" class="btn btn-secondary" onclick="importarDatos()">Importar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal Exportar-->
+  <div class="modal fade" id="modal-exportar">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Importar datos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div>
+            <textarea id="output-datos-guardado"></textarea>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="copiarTexto()">Copiar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
