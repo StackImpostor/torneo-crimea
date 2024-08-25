@@ -269,6 +269,27 @@ function listenerConfirmarRobos(){
     }
   }
 
+  if(grupoPerdedor.miembros.length == 1){
+    //Buscamos el grupo de descalificados
+    let grupoDescalificados;
+    for(let i = grupos.length-1; i >= 0; i--){
+      if(grupos[i].nombre === "Descalificados"){
+        grupoDescalificados = grupos[i];
+        break;
+      }
+    }
+    //Añadimos el tontito a descalificados
+    grupoDescalificados.miembros.push(grupoPerdedor.miembros[0]);
+
+    //Eliminamos el grupo vacio
+    for(let i = 0; i < grupos.length; i++){
+      if(grupos[i].nombre === grupoPerdedor.nombre){
+        grupos.splice(i,1);
+        break;
+      }
+    }
+  }
+
   grupoGanador = null;
   grupoPerdedor = null;
   $("#modal-combate").modal("hide");
