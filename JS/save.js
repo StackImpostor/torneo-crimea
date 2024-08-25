@@ -27,4 +27,5 @@ function importarDatos(){
 function borrarDatos(){
   if(confirm("Seguro que quieres borrar los datos???"))
     localStorage.removeItem("grupos");
+    location.reload();
 }
