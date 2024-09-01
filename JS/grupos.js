@@ -8,32 +8,32 @@ let grupos = [{
   "nombre": "Grupo Zen",
   "miembros": ["Zen'Reel", "Vashalla", "Doldo"]
 }, {
-  "nombre": "Grupo Tia",
-  "miembros": ["Tia", "Azai", "Shorath", "Abbalon"]
+  "nombre": "Grupo Abbalon",
+  "miembros": ["Azai", "Shorath", "Abbalon"]
 }, {
   "nombre": "Grupo Gemelas",
-  "miembros": ["Ilya", "Atenea", "Xianghua", "Makoto"]
+  "miembros": ["Ilya", "Atenea", "Xianghua", "Makoto", "Tia"]
 }, {
   "nombre": "Grupo Kaela",
-  "miembros": ["Kaela Zesiger", "Kobo", "Zeta", "Fir Raiga", "Randolph Wagnis"]
+  "miembros": ["Kaela Zesiger", "Kobo", "Zeta", "Fir Raiga", "Randolph Wagnis", "Seigen"]
 }, {
   "nombre": "Grupo Norio",
   "miembros": ["Aragaki", "Norio", "Sanzu", "Drakken", "Karma"]
 }, {
   "nombre": "Grupo Shin",
-  "miembros": ["Shin Rosewald", "Millicent Melnyk", "Candras"]
+  "miembros": ["Shin Rosewald", "Millicent Melnyk", "Candras", "Cordelia Ravus"]
 }, {
   "nombre": "Grupo Indra",
   "miembros": ["Iemon", "Delos", "Siddartha", "Qi"]
 }, {
   "nombre": "Grupo Nobunaga",
-  "miembros": ["Nobunaga", "Seigen", "Silque", "Naoto Dubois", "Clyne"]
+  "miembros": ["Nobunaga", "Silque", "Naoto Dubois", "Clyne"]
 }, {
   "nombre": "Grupo Karma",
-  "miembros": ["Johannes Nagi", "Voldia Dupont", "Dale", "Konan Aveis"]
+  "miembros": ["Johannes Nagi", "Voldia Dupont", "Dale", "Konan Aveis", "Aran"]
 }, {
   "nombre": "Piratas y niños",
-  "miembros": ["Jesse", "Garp", "Gray", "Aran"]
+  "miembros": ["Jesse", "Garp", "Gray"]
 }, {
   "nombre": "Grupo Maiki",
   "miembros": ["Maiki", "Lirio", "Orion", "Mokichi Robinson", "Farin Barbabronce"]
@@ -42,36 +42,27 @@ let grupos = [{
   "miembros": ["Reinhold Eunibu", "Soleil Eunibu", "Tokuno Tokumichi", "Elliot"]
 }, {
   "nombre": "Grupo Wilhelm",
-  "miembros": ["Lurko", "Wilhelm", "Eli", "Zohel"]
+  "miembros": ["Lurko", "Wilhelm", "Eli", "Zohel", "Xaldir Fertira"]
 }, {
   "nombre": "Grupo Ina",
   "miembros": ["Ina Krabong", "Dimitri Zimmer"]
 }, {
-  "nombre": "Grupo Asher",
-  "miembros": ["Ayame Seukha", "Asher S. Ravus"]
-}, {
   "nombre": "Grupo de la chispa",
-  "miembros": ["Alexander", "Xiatago", "Dan"]
+  "miembros": ["Alexander", "Xiatago"]
 }, {
-  "nombre": "Grupo asesinos",
-  "miembros": ["Nagito", "Tai Lung", "Cordelia Ravus"]
-}, {
-  "nombre": "Grupo Zalan",
-  "miembros": ["Zalan", "Érika Gein"]
-}, {
-  "nombre": "Grupo Xaldir",
-  "miembros": ["Xaldir Fertira", "Uno Yoino", "Palermo", "Hevth Gridewal"]
+  "nombre": "Grupo Uno",
+  "miembros": ["Uno Yoino", "Palermo"]
 }, {
   "nombre": "Grupo Groh",
-  "miembros": ["Altare", "Groh", "Ventra"]
+  "miembros": ["Altare", "Groh", "Ventra", "Dan"]
 }, {
   "nombre": "Grupo Levin y Tyra",
   "miembros": ["Levin", "Tyra Lang", "Lee"]
 }, {
   "nombre": "Grupo Lionel",
-  "miembros": ["Lionel", "Roy"]
+  "miembros": ["Lionel", "Roy", "Asher S. Ravus", "Hevth Gridewal"]
 }, {
   "nombre": "Descalificados",
-  "miembros": ["Roc", "Din", "Diana", "Rafael", "Caronte", "Conrad", "Thorphin", "Leonardo"]
+  "miembros": ["Roc", "Din", "Diana", "Rafael", "Caronte", "Conrad", "Thorphin", "Leonardo", "Ayame Seukha", "Zalan", "Érika Gein", "Nagito", "Tai Lung"]
 }
 ]
