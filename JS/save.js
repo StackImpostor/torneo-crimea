@@ -29,3 +29,7 @@ function borrarDatos(){
     localStorage.removeItem("grupos");
     location.reload();
 }
+
+function borrarDatosSinConfirm(){
+  localStorage.removeItem("grupos");
+}

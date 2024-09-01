@@ -1,3 +1,4 @@
+let version = 2;
 let grupos = [{
   "nombre": "Grupo Miyama",
   "miembros": ["Miyama Yoino", "Sinbad", "Tomoe Itoo", "Nadia Naqjati", "Dorthe"]

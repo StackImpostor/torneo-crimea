@@ -3,6 +3,7 @@ let grupoPerdedor = null;
 
 
 $(document).ready(() => {
+  comprobarVersion();
   loadData();
   
   updateDisplayGrupos();
@@ -308,6 +309,14 @@ function copiarTexto(){
 
   navigator.clipboard.writeText(textarea.value);
   alert("Texto copiado:" + textarea.value);
+}
+
+function comprobarVersion(){
+  let v = localStorage.getItem("version");
+  if(v === null || v < version){
+    borrarDatosSinConfirm();
+    localStorage.setItem("version",version);
+  }
 }
 
 // $(window).on('beforeunload', function(){
